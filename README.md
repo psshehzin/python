@@ -1,2 +1,1 @@
-# python
-Basic python codes
+Noob programmer testing git
