@@ -1,0 +1,65 @@
+#!/home/shehzin/python/anaconda/bin/python
+def countlist(a):
+    s=0
+    for i in a:
+        s=s+1
+    return s
+a=[]
+c=[]
+m=[]
+k=[]
+result=[]
+n=int(input("number of denominations: "))
+print(" ")
+for i in range(0,n):
+    a.append(int(input("coin denomination of type {} available: ".format(i+1))))
+a.sort()
+a.reverse()
+x=int(input("amount to be settled:")) 
+print(" ")
+b=[x//a[i] for i in range(0,n)]
+for i in range(0,n):
+    c.append([])
+for i in range(0,n):
+    for j in range(0,b[i]+1):
+        c[i].append(a[i]*j) 
+    c[i].reverse()  
+m=[[i] for i in c[0]]
+i=1
+for i in range(1,n):
+    for j in m:
+        
+        for l in c[i]:
+            temp=[l]
+            k.append(j+temp)
+    m=[]
+    for z in k:
+        if sum(z)>x:
+            continue
+        m.append(z)
+    k=[]
+for i in m:
+    if(sum(i)==x):
+        temp=[]
+        for z in range(0,n):
+            temp.append(i[z]//a[z])
+        result.append(temp)
+ways=countlist(result)
+t1=sum(result[0])
+bv=[]
+for i in result:
+    t2=sum(i)
+    if t2<=t1:
+        t1=t2
+        bv.append(i)
+print(" ")
+print("There are {0} ways to settle this with available denominations the one that involves minimum coins is ".format(ways,))
+for z in bv:
+    for i in range(0,n):
+        if z[i]==0:
+            continue
+        print(" ")
+        print("{} number of rs {} coins, ".format(z[i],a[i]))
+    print(" ")
+    print("OR")
+    

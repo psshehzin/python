@@ -1,0 +1,62 @@
+#!/home/shehzin/python/anaconda/bin/python
+def countlist(a):
+    s=0
+    for i in a:
+        s=s+1
+    return s
+a=[]
+c=[]
+m=[]
+k=[]
+flag=0
+result=[]
+n=int(input("number of denominations: "))
+print(" ")
+for i in range(0,n):
+    a.append(int(input("coin denomination of type {} available: ".format(i+1))))
+a.sort()
+a.reverse()
+x=int(input("amount to be settled:")) 
+print(" ")
+b=[x//a[i] for i in range(0,n)]
+for i in range(0,n):
+    c.append([])
+for i in range(0,n):
+    for j in range(0,b[i]+1):
+        c[i].append(a[i]*j) 
+    c[i].reverse()  
+m=[[i] for i in c[0]]
+i=1
+for i in range(1,n):
+    for j in m:
+        
+        for l in c[i]:
+            temp=[l]
+            dumb=j+temp
+            print(dumb)
+            if sum(dumb)>x:
+                continue
+            elif i==(n-1) or sum(dumb)==x:
+                ka=0
+                for ij in dumb:
+                    fg=ij//a[ka]
+                    if fg==0:
+                        ka=ka+1
+                        continue
+                
+                    print("{} number of Rs {}".format(fg, a[ka]))
+                    ka=ka+1
+                    print("")
+                    print(" is the best choice") 
+                    flag=1
+                    break     
+            k.append(dumb)
+            if flag==1:
+                break
+            
+    if flag==1:
+        break
+    m=[]
+    m=k
+    k=[]
+
