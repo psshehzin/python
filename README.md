@@ -1,2 +1,2 @@
-#  Python codes
-Simple python challenges
+#  Upskill
+python and Bash scripts
