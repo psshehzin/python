@@ -1,1 +1,2 @@
-Noob programmer testing git
+#  Python codes
+Simple python challenges
