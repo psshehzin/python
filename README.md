@@ -1,2 +1,2 @@
 #  Upskill
-python and Bash scripts
+python and Bash scripts untidy
