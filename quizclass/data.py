@@ -1,0 +1,15 @@
+question_data = [
+{"text": "A slug's blood is green.", "answer": "True"},
+{"text": "The loudest animal is the African Elephant.", "answer": "False"},
+{"text": "Approximately one quarter of human bones are in the feet.", "answer": "True"},
+{"text": "The total surface area of a human lungs is the size of a football pitch.", "answer": "True"},
+{"text": "In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.", "answer": "True"},
+{"text": "In London, UK, if you happen to die in the House of Parliament, you are entitled to a state funeral.", "answer": "False"},
+{"text": "It is illegal to pee in the Ocean in Portugal.", "answer": "True"},
+{"text": "You can lead a cow down stairs but not up stairs.", "answer": "False"},
+{"text": "Google was originally called 'Backrub'.", "answer": "True"},
+{"text": "Buzz Aldrin's mother's maiden name was 'Moon'.", "answer": "True"},
+{"text": "No piece of square dry paper can be folded in half more than 7 times.", "answer": "False"},
+{"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
+]
+results=[{"category":"Geography","type":"boolean","difficulty":"medium","question":"The surface area of Russia is slightly larger than that of the dwarf planet Pluto.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Geography","type":"boolean","difficulty":"easy","question":"There are no deserts in Europe.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Geography","type":"boolean","difficulty":"easy","question":"Toronto is the capital city of the North American country of Canada.","correct_answer":"False","incorrect_answers":["True"]},{"category":"Geography","type":"boolean","difficulty":"easy","question":"St. Louis is the capital of the US State Missouri.","correct_answer":"False","incorrect_answers":["True"]},{"category":"Geography","type":"boolean","difficulty":"hard","question":"Switzerland has four national languages, English being one of them.","correct_answer":"False","incorrect_answers":["True"]},{"category":"Geography","type":"boolean","difficulty":"medium","question":"Norway has a larger land area than Sweden.","correct_answer":"False","incorrect_answers":["True"]},{"category":"Geography","type":"boolean","difficulty":"easy","question":"Tokyo is the capital of Japan.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Geography","type":"boolean","difficulty":"easy","question":"Nova Scotia is on the east coast of Canada.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Geography","type":"boolean","difficulty":"medium","question":"The title of the 1969 film &quot;Krakatoa, East_of Java&quot; is incorrect, as Krakatoa is in fact west of Java.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Geography","type":"boolean","difficulty":"hard","question":"Only one country in the world starts with the letter Q.","correct_answer":"True","incorrect_answers":["False"]}]

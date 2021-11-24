@@ -1,0 +1,12 @@
+from turtle import *
+tu=Turtle()
+#sc=Screen()
+tu.shape("turtle")
+tu.color("black")
+tu.forward(100)
+tu.left(120)
+tu.forward(100)
+tu.left(120)
+tu.forward(100)
+tu.left(120)
+#sc.exitonclick()
