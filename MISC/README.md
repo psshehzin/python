@@ -1,2 +1,2 @@
 #  Upskill
-python and Bash scripts happy
+simple python projetcs
