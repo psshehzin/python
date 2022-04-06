@@ -7,7 +7,7 @@
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 
 # 4. Send the letter generated in step 3 to that person's email address.
-
+import os
 import datetime
 import smtplib
 import random
@@ -30,8 +30,8 @@ for ind,dates in birthdays.iterrows():
             touser=dates.email
             with smtplib.SMTP("smtp.mail.yahoo.com",port=587) as connection:
                 connection.starttls()
-                connection.login(user=user,password="PASSWORD")
+                connection.login(user=user,password=os.environ.get("yahoopass"))
                 connection.sendmail(from_addr=user, to_addrs=touser,msg=f"subject:Happy Birthday!!! \n\n{message}")
-
+                
 
 

@@ -1,4 +1,4 @@
-#!/home/shehzin/python/anaconda/bin/python
+
 def countlist(a):
     s=0
     for i in a:
@@ -49,7 +49,7 @@ for i in range(1,n):
                 print("{} number of Rs {}".format(fg, a[ka]))
                 ka=ka+1
             print("")
-            print(" is the best choice") 
+            print("is the best choice") 
             break            
         m.append(z)
     k=[]

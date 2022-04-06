@@ -2,6 +2,7 @@
 import requests
 import datetime
 import smtplib
+import os
 user="mewtwo199619@yahoo.com"
 UTCISTDIFF="+05:30"
 LAT=10.015861
@@ -56,16 +57,16 @@ sunsetist=utcistconverter(sunsettimeformfunc,UTCISTDIFF)
 hourset=int(sunsetist.split(":")[0])
 #formatting time
 hournow=int(time.hour)
-if not(hourrise<hournow<hourset):
+if not (hourrise<hournow<hourset):
     isspos=requests.get(url="http://api.open-notify.org/iss-now.json")
     isspos.raise_for_status()
     longiss=float(isspos.json()["iss_position"]["longitude"])
     latiss=float(isspos.json()["iss_position"]["latitude"])
-    if isnear(latiss,longiss):
+    if (isnear(latiss,longiss)):
         with smtplib.SMTP("smtp.mail.yahoo.com",port=587) as connection:
             connection.starttls()
-            connection.login(user=user,password="PASSWORD")
-            connection.sendmail(from_addr=user, to_addrs="shehzinps@gmail.com",msg="subject:Space station above\n\nHi Shehz\nLook at the sky and see how SpaceStation  me shines for you jus kidding its me :p\nwith low MEW")
+            connection.login(user=user,password=os.environ.get("yahoopass"))
+            connection.sendmail(from_addr=user, to_addrs="shehzinps@gmail.com",msg="subject:Space station above\n\nHi Shehz\nLook at the sky and see how SpaceStation  me shines for you :p\nwith low MEW")
 
 
 
